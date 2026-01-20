@@ -5,7 +5,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
 }
 
@@ -13,12 +13,22 @@ body {
   background: #333;
   padding: 30px;
   border-radius: 10px;
-  width: 300px;
+  width: 350px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #4caf50;
+}
+
+.pergunta {
+  margin-bottom: 30px;
 }
 
 h2 {
   margin-bottom: 15px;
-  text-align: center;
+  font-size: 18px;
 }
 
 label {
@@ -31,22 +41,35 @@ label {
   transition: 0.3s;
 }
 
-/* Esconde o botão do rádio */
+label:hover {
+  background: #555;
+}
+
+/* Esconde os botões de rádio */
 input[type="radio"] {
   display: none;
 }
 
-/* Quando a resposta certa é escolhida */
-input#certo:checked + label {
-  background: #4caf50; /* Verde */
+/* Respostas certas */
+#p1certo:checked + label,
+#p2certo:checked + label,
+#p3certo:checked + label {
+  background: #4caf50;
 }
 
-/* Quando a resposta errada é escolhida */
-input#errado1:checked + label,
-input#errado2:checked + label {
-  background: #e74c3c; /* Vermelho */
+/* Respostas erradas */
+#p1errado1:checked + label,
+#p1errado2:checked + label,
+#p2errado1:checked + label,
+#p2errado2:checked + label,
+#p3errado1:checked + label,
+#p3errado2:checked + label {
+  background: #e74c3c;
 }
 
-label:hover {
-  background: #555;
+.rodape {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 10px;
+  color: #aaa;
 }
