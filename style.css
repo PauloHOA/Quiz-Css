@@ -50,20 +50,13 @@ input[type="radio"] {
   display: none;
 }
 
-/* Respostas certas */
-#p1certo:checked + label,
-#p2certo:checked + label,
-#p3certo:checked + label {
+
+input[id$="certo"]:checked ~ label[for$="certo"] {
   background: #4caf50;
 }
 
-/* Respostas erradas */
-#p1errado1:checked + label,
-#p1errado2:checked + label,
-#p2errado1:checked + label,
-#p2errado2:checked + label,
-#p3errado1:checked + label,
-#p3errado2:checked + label {
+
+input[id*="errado"]:checked ~ label[for*="errado"] {
   background: #e74c3c;
 }
 
